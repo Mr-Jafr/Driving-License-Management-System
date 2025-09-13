@@ -142,6 +142,9 @@
   <data name="ProfilePic person_Female 72x721" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProfilePic person_Female 72x721.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Menu info_of_media 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu info_of_media 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Add_person_man 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button_Add_person_man 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,7 +220,7 @@
   <data name="Button close 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button close 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Menu info_of_media 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu info_of_media 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button Login 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Login 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

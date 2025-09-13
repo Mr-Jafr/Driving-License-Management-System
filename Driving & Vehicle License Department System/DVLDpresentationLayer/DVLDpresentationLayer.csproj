@@ -236,5 +236,8 @@
   <ItemGroup>
     <None Include="Resources\Menu info_of_media 24x24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Login 24x24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

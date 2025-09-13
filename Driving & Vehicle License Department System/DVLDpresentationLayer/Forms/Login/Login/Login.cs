@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Login_And_Regester
         public Login()
         {
             InitializeComponent();
+            LoadLoginCredentials();
         }
 
         private void GoToMainForm()
@@ -55,11 +57,61 @@ namespace Login_And_Regester
             return ErrorCounter == 0 ? true : false;
         }
 
+        private void SaveLoginCredentials()
+        {
+            string filePath = "RememberMeFile.txt";
+
+            // ===== Writing to a file using StreamWriter =====
+            using (StreamWriter writer = new StreamWriter(filePath, false))
+            {
+                writer.WriteLine(txtBoxUsername.Text);
+                writer.WriteLine(txtBoxPassword.Text);
+            } // writer is closed automatically here
+
+        }
+
+        private void LoadLoginCredentials()
+        {
+            List<string> AccountInfo = new List<string> { };
+
+            string line = "";
+
+            // ===== Reading from a file using StreamReader =====
+            using (StreamReader reader = new StreamReader(@"RememberMeFile.txt"))
+            {
+                bool IsInfoFound = false;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    AccountInfo.Add(line);
+                    cbRememberMe.Checked = true;
+                    IsInfoFound = true;
+                }
+
+                if (IsInfoFound)
+                {
+                    txtBoxUsername.Text = AccountInfo[0];
+                    txtBoxPassword.Text = AccountInfo[1];
+                }
+            }
+            // reader is closed automatically here
+        }
+
+        private void ClearLoginCredentials()
+        {
+            string filePath = "RememberMeFile.txt";
+
+            // ===== Writing to a file using StreamWriter =====
+            using (StreamWriter writer = new StreamWriter(filePath, false))
+            {
+                writer.Write("");
+            } // writer is closed automatically here
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (CheckEmailAndPasswordEmpty())
             {
-                
+
 
                 if (InputValditionForLoginAndRegister.UsernameValditor(txtBoxUsername.Text) &&
                     InputValditionForLoginAndRegister.PasswordValditor(txtBoxPassword.Text))
@@ -69,17 +121,27 @@ namespace Login_And_Regester
                     if (LoginResult > 0)
                     {
                         clsCurrentPerson.CurrentPerson = clsPerson.Find(txtBoxUsername.Text);
+
+                        if (cbRememberMe.Checked)
+                        {
+                            SaveLoginCredentials();
+                        }
+                        else
+                        {
+                            ClearLoginCredentials();
+                        }
+
                         GoToMainForm();
                     }
                     else if (LoginResult == 0)
                     {
-                        MessageBox.Show("This Account is InActive :(","InActive Account",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("This Account is InActive :(", "InActive Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Username or Password :(","Wrong Credintials",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid Username or Password :(", "Wrong Credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                        
+
                 }
             }
         }
@@ -98,7 +160,6 @@ namespace Login_And_Regester
                 toolTipForPasswordAndEmail.SetToolTip(txtBoxPassword, "Invalid Characters @_@");
             }
         }
-
 
         private void cbRevelPassword_CheckedChanged(object sender, EventArgs e)
         {
