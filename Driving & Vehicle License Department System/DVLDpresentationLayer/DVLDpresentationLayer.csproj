@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF5FF2EA-CB8A-49D5-B266-71F0DB19494F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DVLDpresentationLayer</RootNamespace>
+    <AssemblyName>DVLDpresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsCurrentPerson.cs" />
+    <Compile Include="Forms\Add_Update_Person\Add_Update_Person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Update_Person\Add_Update_Person.Designer.cs">
+      <DependentUpon>Add_Update_Person.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagePeople\ManagePeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagePeople\ManagePeople.Designer.cs">
+      <DependentUpon>ManagePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonInfo\PersonInfoCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonInfo\PersonInfoCard.Designer.cs">
+      <DependentUpon>PersonInfoCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonCardInfo.Designer.cs">
+      <DependentUpon>PersonCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Add_Update_Person\Add_Update_Person.resx">
+      <DependentUpon>Add_Update_Person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagePeople\ManagePeople.resx">
+      <DependentUpon>ManagePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonInfo\PersonInfoCard.resx">
+      <DependentUpon>PersonInfoCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonCardInfo.resx">
+      <DependentUpon>PersonCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DVLDbusinessLayer\DVLDbusinessLayer.csproj">
+      <Project>{17b9af94-aded-47d3-a03e-8edbec0137e3}</Project>
+      <Name>DVLDbusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button add_Save 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button close 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label address 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label admin 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label admin_female 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label barcode 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label calendar 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label Country 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label id 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label mail 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label phone 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label user 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePic person 64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripMenu_Application_add 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripMenu_Drivers 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripMenu_People 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripMenu_Settings 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripMenu_user_config 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripMenu_Application 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title_People 72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title_car 72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Add_person_man 72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Add_person_man 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Add_person_man 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePic person_Female 72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePic person_Male 72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePic person_Female 72x721.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePic person_Male 72x721.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu info_of_media 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu edit 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Delete 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu mailbox 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu mobile_phone 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu info_of_media 24x24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
