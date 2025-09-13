@@ -33,13 +33,18 @@
             this.toolStripButtonPeople = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDrivers = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonUsers = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonSettings = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItemCurrentUserInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemSignOut = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenu
             // 
             this.toolStripMenu.ImageScalingSize = new System.Drawing.Size(48, 48);
+            this.toolStripMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonApplications,
             this.toolStripButtonPeople,
@@ -87,11 +92,48 @@
             // 
             // toolStripButtonSettings
             // 
+            this.toolStripButtonSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemCurrentUserInfo,
+            this.toolStripMenuItemChangePassword,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItemSignOut});
             this.toolStripButtonSettings.Image = global::DVLDpresentationLayer.Properties.Resources.ToolStripMenu_Settings_48x48;
             this.toolStripButtonSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSettings.Name = "toolStripButtonSettings";
-            this.toolStripButtonSettings.Size = new System.Drawing.Size(149, 52);
+            this.toolStripButtonSettings.Size = new System.Drawing.Size(158, 52);
             this.toolStripButtonSettings.Text = "Account Settings";
+            // 
+            // toolStripMenuItemCurrentUserInfo
+            // 
+            this.toolStripMenuItemCurrentUserInfo.Image = global::DVLDpresentationLayer.Properties.Resources.info_of_media;
+            this.toolStripMenuItemCurrentUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemCurrentUserInfo.Name = "toolStripMenuItemCurrentUserInfo";
+            this.toolStripMenuItemCurrentUserInfo.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItemCurrentUserInfo.Text = "Current User Info";
+            this.toolStripMenuItemCurrentUserInfo.Click += new System.EventHandler(this.toolStripMenuItemCurrentUserInfo_Click);
+            // 
+            // toolStripMenuItemChangePassword
+            // 
+            this.toolStripMenuItemChangePassword.Image = global::DVLDpresentationLayer.Properties.Resources.context_Menu_Change_Password24x24;
+            this.toolStripMenuItemChangePassword.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemChangePassword.Name = "toolStripMenuItemChangePassword";
+            this.toolStripMenuItemChangePassword.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItemChangePassword.Text = "Change Password";
+            this.toolStripMenuItemChangePassword.Click += new System.EventHandler(this.toolStripMenuItemChangePassword_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(193, 6);
+            // 
+            // toolStripMenuItemSignOut
+            // 
+            this.toolStripMenuItemSignOut.Image = global::DVLDpresentationLayer.Properties.Resources.user_delete;
+            this.toolStripMenuItemSignOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemSignOut.Name = "toolStripMenuItemSignOut";
+            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItemSignOut.Text = "Sign Out";
+            this.toolStripMenuItemSignOut.Click += new System.EventHandler(this.toolStripMenuItemSignOut_Click);
             // 
             // Main
             // 
@@ -116,6 +158,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonPeople;
         private System.Windows.Forms.ToolStripButton toolStripButtonDrivers;
         private System.Windows.Forms.ToolStripButton toolStripButtonUsers;
-        private System.Windows.Forms.ToolStripButton toolStripButtonSettings;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripButtonSettings;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCurrentUserInfo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemChangePassword;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSignOut;
     }
 }

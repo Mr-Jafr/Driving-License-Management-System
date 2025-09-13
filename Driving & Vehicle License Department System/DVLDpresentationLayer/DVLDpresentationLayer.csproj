@@ -55,10 +55,10 @@
     <Compile Include="Forms\Add_Update_Person\Add_Update_Person.Designer.cs">
       <DependentUpon>Add_Update_Person.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login\Login\Login.cs">
+    <Compile Include="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login\Login\Login.Designer.cs">
+    <Compile Include="Forms\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Main\Main.cs">
@@ -90,7 +90,7 @@
     <EmbeddedResource Include="Forms\Add_Update_Person\Add_Update_Person.resx">
       <DependentUpon>Add_Update_Person.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login\Login\Login.resx">
+    <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\Main.resx">
@@ -238,6 +238,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Login 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\context Menu Current User Info 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\context Menu Change Password24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\context Menu Sign Out 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_of_media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

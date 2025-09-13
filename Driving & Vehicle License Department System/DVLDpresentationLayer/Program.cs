@@ -17,7 +17,7 @@ namespace Contacts
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_And_Regester.Login());
+            Application.Run(new DVLDpresentationLayer.Forms.Main());
         }
     }
 }

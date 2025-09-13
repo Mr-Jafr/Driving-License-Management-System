@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login_And_Regester;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,5 +23,27 @@ namespace DVLDpresentationLayer.Forms
             ManagePeople f = new ManagePeople();
             f.ShowDialog();
         }
+
+        
+        //--------------------------------------------------------------------//
+        private void toolStripMenuItemChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItemCurrentUserInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItemSignOut_Click(object sender, EventArgs e)
+        {
+            clsCurrentPerson.CurrentPerson = null;
+
+            Login f = new Login();
+            f.Show();
+            this.Hide();
+        }
+
     }
 }
