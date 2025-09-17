@@ -1,6 +1,6 @@
-﻿namespace DVLDpresentationLayer.Forms
+﻿namespace DVLDpresentationLayer.Forms.ManageUsers
 {
-    partial class ManagePeople
+    partial class ManageUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -29,47 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelManagePeople = new System.Windows.Forms.Label();
-            this.dataGridViewPersonsInfo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUsersInfo = new System.Windows.Forms.DataGridView();
             this.contextMenuStripForPeople = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.labelRecords = new System.Windows.Forms.Label();
-            this.labelFilter = new System.Windows.Forms.Label();
+            this.labelManageUsers = new System.Windows.Forms.Label();
             this.comboBoxFilterBy = new System.Windows.Forms.ComboBox();
-            this.buttonAddPerson = new System.Windows.Forms.Button();
+            this.labelFilter = new System.Windows.Forms.Label();
+            this.labelRecords = new System.Windows.Forms.Label();
+            this.comboBoxIsActiveChoice = new System.Windows.Forms.ComboBox();
+            this.textBoxMoreFillter = new System.Windows.Forms.TextBox();
+            this.buttonCloseForm = new System.Windows.Forms.Button();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonCloseForm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonsInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsersInfo)).BeginInit();
             this.contextMenuStripForPeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelManagePeople
+            // dataGridViewUsersInfo
             // 
-            this.labelManagePeople.AutoSize = true;
-            this.labelManagePeople.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelManagePeople.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelManagePeople.Location = new System.Drawing.Point(372, 168);
-            this.labelManagePeople.Name = "labelManagePeople";
-            this.labelManagePeople.Size = new System.Drawing.Size(215, 31);
-            this.labelManagePeople.TabIndex = 0;
-            this.labelManagePeople.Text = "Manage People";
-            // 
-            // dataGridViewPersonsInfo
-            // 
-            this.dataGridViewPersonsInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonsInfo.ContextMenuStrip = this.contextMenuStripForPeople;
-            this.dataGridViewPersonsInfo.Location = new System.Drawing.Point(12, 249);
-            this.dataGridViewPersonsInfo.Name = "dataGridViewPersonsInfo";
-            this.dataGridViewPersonsInfo.Size = new System.Drawing.Size(960, 198);
-            this.dataGridViewPersonsInfo.TabIndex = 2;
+            this.dataGridViewUsersInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewUsersInfo.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewUsersInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsersInfo.ContextMenuStrip = this.contextMenuStripForPeople;
+            this.dataGridViewUsersInfo.Location = new System.Drawing.Point(12, 251);
+            this.dataGridViewUsersInfo.Name = "dataGridViewUsersInfo";
+            this.dataGridViewUsersInfo.Size = new System.Drawing.Size(960, 198);
+            this.dataGridViewUsersInfo.TabIndex = 9;
             // 
             // contextMenuStripForPeople
             // 
@@ -95,45 +88,87 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 6);
             // 
-            // labelRecords
+            // labelManageUsers
             // 
-            this.labelRecords.AutoSize = true;
-            this.labelRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecords.Location = new System.Drawing.Point(12, 450);
-            this.labelRecords.Name = "labelRecords";
-            this.labelRecords.Size = new System.Drawing.Size(86, 16);
-            this.labelRecords.TabIndex = 3;
-            this.labelRecords.Text = "# Records: ";
-            // 
-            // labelFilter
-            // 
-            this.labelFilter.AutoSize = true;
-            this.labelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFilter.Location = new System.Drawing.Point(12, 220);
-            this.labelFilter.Name = "labelFilter";
-            this.labelFilter.Size = new System.Drawing.Size(68, 16);
-            this.labelFilter.TabIndex = 4;
-            this.labelFilter.Text = "Filter By:";
+            this.labelManageUsers.AutoSize = true;
+            this.labelManageUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelManageUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelManageUsers.Location = new System.Drawing.Point(372, 170);
+            this.labelManageUsers.Name = "labelManageUsers";
+            this.labelManageUsers.Size = new System.Drawing.Size(202, 31);
+            this.labelManageUsers.TabIndex = 7;
+            this.labelManageUsers.Text = "Manage Users";
             // 
             // comboBoxFilterBy
             // 
             this.comboBoxFilterBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFilterBy.FormattingEnabled = true;
-            this.comboBoxFilterBy.Location = new System.Drawing.Point(86, 217);
+            this.comboBoxFilterBy.Location = new System.Drawing.Point(86, 219);
             this.comboBoxFilterBy.Name = "comboBoxFilterBy";
             this.comboBoxFilterBy.Size = new System.Drawing.Size(176, 24);
-            this.comboBoxFilterBy.TabIndex = 5;
+            this.comboBoxFilterBy.TabIndex = 12;
             this.comboBoxFilterBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilterBy_SelectedIndexChanged);
             // 
-            // buttonAddPerson
+            // labelFilter
             // 
-            this.buttonAddPerson.Image = global::DVLDpresentationLayer.Properties.Resources.Button_Add_person_man_48x48;
-            this.buttonAddPerson.Location = new System.Drawing.Point(918, 195);
-            this.buttonAddPerson.Name = "buttonAddPerson";
-            this.buttonAddPerson.Size = new System.Drawing.Size(54, 48);
-            this.buttonAddPerson.TabIndex = 6;
-            this.buttonAddPerson.UseVisualStyleBackColor = true;
-            this.buttonAddPerson.Click += new System.EventHandler(this.buttonAddPerson_Click);
+            this.labelFilter.AutoSize = true;
+            this.labelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilter.Location = new System.Drawing.Point(12, 222);
+            this.labelFilter.Name = "labelFilter";
+            this.labelFilter.Size = new System.Drawing.Size(68, 16);
+            this.labelFilter.TabIndex = 11;
+            this.labelFilter.Text = "Filter By:";
+            // 
+            // labelRecords
+            // 
+            this.labelRecords.AutoSize = true;
+            this.labelRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecords.Location = new System.Drawing.Point(12, 452);
+            this.labelRecords.Name = "labelRecords";
+            this.labelRecords.Size = new System.Drawing.Size(86, 16);
+            this.labelRecords.TabIndex = 10;
+            this.labelRecords.Text = "# Records: ";
+            // 
+            // comboBoxIsActiveChoice
+            // 
+            this.comboBoxIsActiveChoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxIsActiveChoice.FormattingEnabled = true;
+            this.comboBoxIsActiveChoice.Items.AddRange(new object[] {
+            "All",
+            "Yes",
+            "No"});
+            this.comboBoxIsActiveChoice.Location = new System.Drawing.Point(268, 219);
+            this.comboBoxIsActiveChoice.Name = "comboBoxIsActiveChoice";
+            this.comboBoxIsActiveChoice.Size = new System.Drawing.Size(98, 24);
+            this.comboBoxIsActiveChoice.TabIndex = 14;
+            this.comboBoxIsActiveChoice.Visible = false;
+            this.comboBoxIsActiveChoice.SelectedIndexChanged += new System.EventHandler(this.comboBoxIsActiveChoice_SelectedIndexChanged);
+            // 
+            // textBoxMoreFillter
+            // 
+            this.textBoxMoreFillter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMoreFillter.Location = new System.Drawing.Point(268, 219);
+            this.textBoxMoreFillter.Multiline = true;
+            this.textBoxMoreFillter.Name = "textBoxMoreFillter";
+            this.textBoxMoreFillter.Size = new System.Drawing.Size(196, 24);
+            this.textBoxMoreFillter.TabIndex = 15;
+            this.textBoxMoreFillter.Visible = false;
+            this.textBoxMoreFillter.TextChanged += new System.EventHandler(this.textBoxMoreFillter_TextChanged);
+            // 
+            // buttonCloseForm
+            // 
+            this.buttonCloseForm.BackColor = System.Drawing.Color.Snow;
+            this.buttonCloseForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCloseForm.Image = global::DVLDpresentationLayer.Properties.Resources.Button_close_another_24x24;
+            this.buttonCloseForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCloseForm.Location = new System.Drawing.Point(893, 455);
+            this.buttonCloseForm.Name = "buttonCloseForm";
+            this.buttonCloseForm.Size = new System.Drawing.Size(79, 33);
+            this.buttonCloseForm.TabIndex = 16;
+            this.buttonCloseForm.Text = "Close";
+            this.buttonCloseForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCloseForm.UseVisualStyleBackColor = false;
+            this.buttonCloseForm.Click += new System.EventHandler(this.buttonCloseForm_Click);
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -142,7 +177,6 @@
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
             this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // addNewPersonToolStripMenuItem
             // 
@@ -151,7 +185,6 @@
             this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
             this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.addNewPersonToolStripMenuItem.Text = "Add New Person";
-            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -160,7 +193,6 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -169,7 +201,6 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
@@ -187,47 +218,43 @@
             this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
             // 
+            // buttonAddUser
+            // 
+            this.buttonAddUser.Image = global::DVLDpresentationLayer.Properties.Resources.user_add;
+            this.buttonAddUser.Location = new System.Drawing.Point(918, 197);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(54, 48);
+            this.buttonAddUser.TabIndex = 13;
+            this.buttonAddUser.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DVLDpresentationLayer.Properties.Resources.Title_People_72x72;
-            this.pictureBox1.Location = new System.Drawing.Point(378, 12);
+            this.pictureBox1.Image = global::DVLDpresentationLayer.Properties.Resources.user_config;
+            this.pictureBox1.Location = new System.Drawing.Point(378, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 153);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonCloseForm
-            // 
-            this.buttonCloseForm.BackColor = System.Drawing.Color.Snow;
-            this.buttonCloseForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCloseForm.Image = global::DVLDpresentationLayer.Properties.Resources.Button_close_another_24x24;
-            this.buttonCloseForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCloseForm.Location = new System.Drawing.Point(893, 453);
-            this.buttonCloseForm.Name = "buttonCloseForm";
-            this.buttonCloseForm.Size = new System.Drawing.Size(79, 33);
-            this.buttonCloseForm.TabIndex = 17;
-            this.buttonCloseForm.Text = "Close";
-            this.buttonCloseForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCloseForm.UseVisualStyleBackColor = false;
-            this.buttonCloseForm.Click += new System.EventHandler(this.buttonCloseForm_Click);
-            // 
-            // ManagePeople
+            // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.buttonCloseForm);
-            this.Controls.Add(this.buttonAddPerson);
+            this.Controls.Add(this.comboBoxIsActiveChoice);
+            this.Controls.Add(this.dataGridViewUsersInfo);
+            this.Controls.Add(this.labelManageUsers);
+            this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.comboBoxFilterBy);
             this.Controls.Add(this.labelFilter);
             this.Controls.Add(this.labelRecords);
-            this.Controls.Add(this.dataGridViewPersonsInfo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelManagePeople);
-            this.Name = "ManagePeople";
-            this.Text = "Manage People";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonsInfo)).EndInit();
+            this.Controls.Add(this.textBoxMoreFillter);
+            this.Name = "ManageUsers";
+            this.Text = "ManageUsers";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsersInfo)).EndInit();
             this.contextMenuStripForPeople.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -237,13 +264,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelManagePeople;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridViewPersonsInfo;
-        private System.Windows.Forms.Label labelRecords;
-        private System.Windows.Forms.Label labelFilter;
-        private System.Windows.Forms.ComboBox comboBoxFilterBy;
-        private System.Windows.Forms.Button buttonAddPerson;
+        private System.Windows.Forms.DataGridView dataGridViewUsersInfo;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripForPeople;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
@@ -253,6 +274,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
+        private System.Windows.Forms.Label labelManageUsers;
+        private System.Windows.Forms.Button buttonAddUser;
+        private System.Windows.Forms.ComboBox comboBoxFilterBy;
+        private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.Label labelRecords;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBoxIsActiveChoice;
+        private System.Windows.Forms.TextBox textBoxMoreFillter;
         private System.Windows.Forms.Button buttonCloseForm;
     }
 }

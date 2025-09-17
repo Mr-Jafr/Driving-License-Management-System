@@ -45,5 +45,11 @@ namespace DVLDpresentationLayer.Forms
             this.Hide();
         }
 
+        private void toolStripButtonUsers_Click(object sender, EventArgs e)
+        {
+            ManageUsers.ManageUsers f = new ManageUsers.ManageUsers();
+            f.ShowDialog();
+            
+        }
     }
 }

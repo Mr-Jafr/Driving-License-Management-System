@@ -89,6 +89,7 @@
             this.toolStripButtonUsers.Name = "toolStripButtonUsers";
             this.toolStripButtonUsers.Size = new System.Drawing.Size(87, 52);
             this.toolStripButtonUsers.Text = "Users";
+            this.toolStripButtonUsers.Click += new System.EventHandler(this.toolStripButtonUsers_Click);
             // 
             // toolStripButtonSettings
             // 
@@ -108,7 +109,7 @@
             this.toolStripMenuItemCurrentUserInfo.Image = global::DVLDpresentationLayer.Properties.Resources.info_of_media;
             this.toolStripMenuItemCurrentUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemCurrentUserInfo.Name = "toolStripMenuItemCurrentUserInfo";
-            this.toolStripMenuItemCurrentUserInfo.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItemCurrentUserInfo.Size = new System.Drawing.Size(184, 38);
             this.toolStripMenuItemCurrentUserInfo.Text = "Current User Info";
             this.toolStripMenuItemCurrentUserInfo.Click += new System.EventHandler(this.toolStripMenuItemCurrentUserInfo_Click);
             // 
@@ -117,21 +118,21 @@
             this.toolStripMenuItemChangePassword.Image = global::DVLDpresentationLayer.Properties.Resources.context_Menu_Change_Password24x24;
             this.toolStripMenuItemChangePassword.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemChangePassword.Name = "toolStripMenuItemChangePassword";
-            this.toolStripMenuItemChangePassword.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItemChangePassword.Size = new System.Drawing.Size(184, 38);
             this.toolStripMenuItemChangePassword.Text = "Change Password";
             this.toolStripMenuItemChangePassword.Click += new System.EventHandler(this.toolStripMenuItemChangePassword_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(193, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(181, 6);
             // 
             // toolStripMenuItemSignOut
             // 
             this.toolStripMenuItemSignOut.Image = global::DVLDpresentationLayer.Properties.Resources.user_delete;
             this.toolStripMenuItemSignOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItemSignOut.Name = "toolStripMenuItemSignOut";
-            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(184, 38);
             this.toolStripMenuItemSignOut.Text = "Sign Out";
             this.toolStripMenuItemSignOut.Click += new System.EventHandler(this.toolStripMenuItemSignOut_Click);
             // 

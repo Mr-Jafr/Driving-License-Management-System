@@ -165,8 +165,13 @@ namespace DVLDbusinessLayer
 
         }
 
-        
-        
+        public static DataTable GetAllUsers()
+        {
+            return clsPersonDataAccess.GetAllUsers();
+
+        }
+
+
         public static bool DeletePerson(int PersonID)
         {
             return clsPersonDataAccess.DeletePerson(PersonID);

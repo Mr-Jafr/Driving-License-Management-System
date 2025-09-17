@@ -341,6 +341,51 @@ namespace DVLDcontactsDataAccessLayer
 
         }
 
+        public static DataTable GetAllUsers()
+        {
+
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"SELECT DVLD.dbo.Users.UserID as 'User ID', DVLD.dbo.Users.PersonID as 'Person ID',
+                             (DVLD.dbo.People.FirstName + ' ' + DVLD.dbo.People.SecondName + ' ' +
+                             DVLD.dbo.People.ThirdName + ' ' + DVLD.dbo.People.LastName) as 'Full Name',
+                             DVLD.dbo.Users.UserName, DVLD.dbo.Users.IsActive
+                             FROM DVLD.dbo.Users INNER JOIN
+                             DVLD.dbo.People ON DVLD.dbo.Users.PersonID = DVLD.dbo.People.PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
 
         public static void DeletePersonImgFromMemory(string ImagePath)
         {

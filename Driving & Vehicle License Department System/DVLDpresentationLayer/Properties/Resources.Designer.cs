@@ -113,6 +113,16 @@ namespace DVLDpresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_close_another_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("Button close another 24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Login_24x24 {
             get {
                 object obj = ResourceManager.GetObject("Button Login 24x24", resourceCulture);
@@ -446,6 +456,26 @@ namespace DVLDpresentationLayer.Properties {
         internal static System.Drawing.Bitmap ToolStripMenu_user_config_48x48 {
             get {
                 object obj = ResourceManager.GetObject("ToolStripMenu_user_config 48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add {
+            get {
+                object obj = ResourceManager.GetObject("user_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_config {
+            get {
+                object obj = ResourceManager.GetObject("user_config", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

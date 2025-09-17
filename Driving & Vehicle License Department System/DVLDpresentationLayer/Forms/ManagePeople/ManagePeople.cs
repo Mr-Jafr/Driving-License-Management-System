@@ -64,7 +64,6 @@ namespace DVLDpresentationLayer.Forms
 
         private void comboBoxFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             dataGridViewPersonsInfo.Sort(dataGridViewPersonsInfo.Columns[comboBoxFilterBy.SelectedItem.ToString()], ListSortDirection.Ascending);
         }
 
@@ -148,5 +147,9 @@ namespace DVLDpresentationLayer.Forms
             FillPersonsInfo();
         }
 
+        private void buttonCloseForm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
