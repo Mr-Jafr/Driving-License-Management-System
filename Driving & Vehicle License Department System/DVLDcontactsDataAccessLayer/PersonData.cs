@@ -302,12 +302,15 @@ namespace DVLDcontactsDataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT DVLD.dbo.People.PersonID, DVLD.dbo.People.NationalNo, DVLD.dbo.People.FirstName," +
-                "DVLD.dbo.People.SecondName, DVLD.dbo.People.ThirdName,  DVLD.dbo.People.LastName,  DVLD.dbo.People.DateOfBirth," +
-                "CASE DVLD.dbo.People.Gender  WHEN 0 THEN 'Male'  WHEN 1 THEN 'Female' END AS Gender," +
-                "DVLD.dbo.People.Address, DVLD.dbo.People.Phone, DVLD.dbo.People.Email, DVLD.dbo.Countries.CountryName," +
-                "DVLD.dbo.People.ImagePath FROM DVLD.dbo.People INNER JOIN DVLD.dbo.Countries" +
-                " ON DVLD.dbo.People.NationalityCountryID = DVLD.dbo.Countries.CountryID;";
+            string query = @"SELECT DVLD.dbo.People.PersonID as 'Person ID', DVLD.dbo.People.NationalNo as 'National No',
+                             DVLD.dbo.People.FirstName as 'First Name', 
+                             DVLD.dbo.People.SecondName as 'Second Name', DVLD.dbo.People.ThirdName as 'Third Name',
+                             DVLD.dbo.People.LastName as 'Last Name',  DVLD.dbo.People.DateOfBirth as 'Date Of Birth',
+                             CASE DVLD.dbo.People.Gender  WHEN 0 THEN 'Male'  WHEN 1 THEN 'Female' END AS Gender,
+                             DVLD.dbo.People.Address, DVLD.dbo.People.Phone, DVLD.dbo.People.Email,
+                             DVLD.dbo.Countries.CountryName as 'Country Name',
+                             DVLD.dbo.People.ImagePath FROM DVLD.dbo.People INNER JOIN DVLD.dbo.Countries
+                             ON DVLD.dbo.People.NationalityCountryID = DVLD.dbo.Countries.CountryID;";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -579,13 +582,13 @@ namespace DVLDcontactsDataAccessLayer
             try
             {
                 connection.Open();
-                
+
                 object resultObj = command.ExecuteScalar();  // we only need one value
 
                 if (resultObj != null && resultObj != DBNull.Value)
                     Result = Convert.ToInt32(resultObj);
 
-                
+
             }
             catch (Exception ex)
             {

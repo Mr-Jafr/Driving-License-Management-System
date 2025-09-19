@@ -18,6 +18,7 @@ namespace DVLDpresentationLayer.Forms
         {
             InitializeComponent();
             FillPersonsInfo();
+            comboBoxFilterBy.SelectedItem = "None";
         }
 
         public void FillPersonsInfo()
@@ -26,7 +27,6 @@ namespace DVLDpresentationLayer.Forms
             FillFilter(dt);
             labelRecords.Text = "# " + dt.Rows.Count.ToString();
             dataGridViewPersonsInfo.DataSource = dt;
-
         }
 
         public void FillFilter(DataTable dt)
@@ -36,7 +36,13 @@ namespace DVLDpresentationLayer.Forms
             {
                 comboBoxFilterBy.Items.Add(column.ColumnName);
             }
+            comboBoxFilterBy.Items.Add("None");
+        }
 
+        private void RestFillterToDefult()
+        {
+            DataTable dt = (DataTable)dataGridViewPersonsInfo.DataSource;
+            dt.DefaultView.Sort = "[Person ID] ASC"; // Show all rows
         }
 
 
@@ -47,6 +53,18 @@ namespace DVLDpresentationLayer.Forms
             _HasDataChanged = HasDataChanged;
         }
         //----------------//
+
+        private void comboBoxFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             if (comboBoxFilterBy.SelectedItem.ToString() != "None")
+            {
+            dataGridViewPersonsInfo.Sort(dataGridViewPersonsInfo.Columns[comboBoxFilterBy.SelectedItem.ToString()], ListSortDirection.Ascending);
+            }
+            else
+            {
+                RestFillterToDefult();
+            }
+        }
 
         public void OpenAdd_EditPersonForm(int PersonID)
         {
@@ -60,11 +78,6 @@ namespace DVLDpresentationLayer.Forms
             {
                 FillPersonsInfo();
             }
-        }
-
-        private void comboBoxFilterBy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dataGridViewPersonsInfo.Sort(dataGridViewPersonsInfo.Columns[comboBoxFilterBy.SelectedItem.ToString()], ListSortDirection.Ascending);
         }
 
         private void buttonAddPerson_Click(object sender, EventArgs e)
@@ -118,8 +131,6 @@ namespace DVLDpresentationLayer.Forms
             }
         }
 
-
-
         private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenAdd_EditPersonForm(-1);
@@ -131,7 +142,7 @@ namespace DVLDpresentationLayer.Forms
         {
             if (dataGridViewPersonsInfo.SelectedRows.Count > 0)
             {
-                int personID = Convert.ToInt32(dataGridViewPersonsInfo.SelectedRows[0].Cells["PersonID"].Value);
+                int personID = Convert.ToInt32(dataGridViewPersonsInfo.SelectedRows[0].Cells["Person ID"].Value);
                 return personID;
             }
             else

@@ -143,6 +143,16 @@ namespace DVLDpresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap context_Menu_Change_Password24x241 {
+            get {
+                object obj = ResourceManager.GetObject("context Menu Change Password24x241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap context_Menu_Current_User_Info_24x24 {
             get {
                 object obj = ResourceManager.GetObject("context Menu Current User Info 24x24", resourceCulture);
@@ -156,6 +166,26 @@ namespace DVLDpresentationLayer.Properties {
         internal static System.Drawing.Bitmap context_Menu_Sign_Out_24x24 {
             get {
                 object obj = ResourceManager.GetObject("context Menu Sign Out 24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_User_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("delete_User 24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_User_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("edit_User 24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +363,16 @@ namespace DVLDpresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap password_Change_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("password_Change 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProfilePic_person_64x64 {
             get {
                 object obj = ResourceManager.GetObject("ProfilePic person 64x64", resourceCulture);
@@ -376,6 +416,16 @@ namespace DVLDpresentationLayer.Properties {
         internal static System.Drawing.Bitmap ProfilePic_person_Male_72x721 {
             get {
                 object obj = ResourceManager.GetObject("ProfilePic person_Male 72x721", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Show_User_Info_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("Show_User_Info 24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +516,16 @@ namespace DVLDpresentationLayer.Properties {
         internal static System.Drawing.Bitmap user_add {
             get {
                 object obj = ResourceManager.GetObject("user_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("user_add 24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

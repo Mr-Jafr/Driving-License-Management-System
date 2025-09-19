@@ -272,5 +272,23 @@
   <ItemGroup>
     <None Include="Resources\Button close another 24x24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show_User_Info 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_User 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_User 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\context Menu Change Password24x241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_Change 32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
