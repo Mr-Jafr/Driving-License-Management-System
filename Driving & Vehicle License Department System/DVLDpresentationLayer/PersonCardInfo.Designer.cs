@@ -56,6 +56,7 @@
             this.labelNationalNo = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelAdress = new System.Windows.Forms.Label();
+            this.linkLabelEditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.PersonInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCountry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDateOfBirth)).BeginInit();
@@ -71,6 +72,7 @@
             // PersonInfo
             // 
             this.PersonInfo.BackColor = System.Drawing.Color.Transparent;
+            this.PersonInfo.Controls.Add(this.linkLabelEditPersonInfo);
             this.PersonInfo.Controls.Add(this.pictureBoxCountry);
             this.PersonInfo.Controls.Add(this.pictureBoxDateOfBirth);
             this.PersonInfo.Controls.Add(this.pictureBoxPhone);
@@ -397,6 +399,18 @@
             this.labelAdress.TabIndex = 9;
             this.labelAdress.Text = "Address:";
             // 
+            // linkLabelEditPersonInfo
+            // 
+            this.linkLabelEditPersonInfo.AutoSize = true;
+            this.linkLabelEditPersonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelEditPersonInfo.Location = new System.Drawing.Point(695, 66);
+            this.linkLabelEditPersonInfo.Name = "linkLabelEditPersonInfo";
+            this.linkLabelEditPersonInfo.Size = new System.Drawing.Size(123, 20);
+            this.linkLabelEditPersonInfo.TabIndex = 38;
+            this.linkLabelEditPersonInfo.TabStop = true;
+            this.linkLabelEditPersonInfo.Text = "Edit Person Info";
+            this.linkLabelEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEditPersonInfo_LinkClicked);
+            // 
             // PersonCardInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,5 +464,6 @@
         private System.Windows.Forms.Label labelNationalNo;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelAdress;
+        private System.Windows.Forms.LinkLabel linkLabelEditPersonInfo;
     }
 }

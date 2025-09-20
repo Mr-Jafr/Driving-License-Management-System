@@ -133,6 +133,16 @@ namespace DVLDpresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_button_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("close_button 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap context_Menu_Change_Password24x24 {
             get {
                 object obj = ResourceManager.GetObject("context Menu Change Password24x24", resourceCulture);
@@ -363,6 +373,16 @@ namespace DVLDpresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap next_button_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("next_button 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_Change_32x32 {
             get {
                 object obj = ResourceManager.GetObject("password_Change 32x32", resourceCulture);
@@ -416,6 +436,16 @@ namespace DVLDpresentationLayer.Properties {
         internal static System.Drawing.Bitmap ProfilePic_person_Male_72x721 {
             get {
                 object obj = ResourceManager.GetObject("ProfilePic person_Male 72x721", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_button_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("save_button 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,6 +563,16 @@ namespace DVLDpresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_add_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("user_add 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_config {
             get {
                 object obj = ResourceManager.GetObject("user_config", resourceCulture);
@@ -546,6 +586,16 @@ namespace DVLDpresentationLayer.Properties {
         internal static System.Drawing.Bitmap user_delete {
             get {
                 object obj = ResourceManager.GetObject("user_delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_find_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("user_find 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

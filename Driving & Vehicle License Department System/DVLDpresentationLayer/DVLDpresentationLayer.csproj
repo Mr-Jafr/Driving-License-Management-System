@@ -55,6 +55,12 @@
     <Compile Include="Forms\Add_Update_Person\Add_Update_Person.Designer.cs">
       <DependentUpon>Add_Update_Person.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Add_Update_User\Add_Update_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Update_User\Add_Update_User.Designer.cs">
+      <DependentUpon>Add_Update_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Add_Update_Person\Add_Update_Person.resx">
       <DependentUpon>Add_Update_Person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_Update_User\Add_Update_User.resx">
+      <DependentUpon>Add_Update_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -289,6 +298,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\password_Change 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_button 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_button 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_button 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_find 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add 32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

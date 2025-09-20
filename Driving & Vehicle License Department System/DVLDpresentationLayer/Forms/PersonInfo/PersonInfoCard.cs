@@ -38,22 +38,6 @@ namespace DVLDpresentationLayer.Forms.PersonInfo
             CloseForm();
         }
 
-        private void GetResulteDataBackHasDataChanged(object sender, bool HasDataChanged)
-        {
-            _HasDataChanged = HasDataChanged;
-        }
-        private void linkLabelEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Add_Update_Person f = new Add_Update_Person(CurrentPersonID);
-
-            f.DataBackHasDataChanged += GetResulteDataBackHasDataChanged; // Subscribe to the event
-
-            f.ShowDialog();
-
-            if (_HasDataChanged)
-            {
-                LoadPersonCardInfo();
-            }
-        }
+        
     }
 }

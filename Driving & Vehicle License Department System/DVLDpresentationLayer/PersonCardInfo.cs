@@ -20,6 +20,8 @@ namespace DVLDpresentationLayer
             InitializeComponent();
         }
 
+        
+        private bool _HasDataChanged = false;
         public void LoadPersonCardInfo(int PersonID)
         {
             clsPerson person = clsPerson.Find(PersonID);
@@ -67,6 +69,25 @@ namespace DVLDpresentationLayer
                 labelshowCountry.Text = clsPerson.GetCountry(person.NationalityCountryID);
 
                 labelshowDateOfBirth.Text = person.DateOfBirth.ToString("yyyy/MM/dd");
+            }
+        }
+
+        private void GetResulteDataBackHasDataChanged(object sender, bool HasDataChanged)
+        {
+            _HasDataChanged = HasDataChanged;
+        }
+        private void linkLabelEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            Add_Update_Person f = new Add_Update_Person(int.Parse(lableshowPersonID.Text));
+
+            f.DataBackHasDataChanged += GetResulteDataBackHasDataChanged; // Subscribe to the event
+
+            f.ShowDialog();
+
+            if (_HasDataChanged)
+            {
+                LoadPersonCardInfo(int.Parse(lableshowPersonID.Text));
             }
         }
     }

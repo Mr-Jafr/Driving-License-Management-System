@@ -31,7 +31,6 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.personCardInfo1 = new DVLDpresentationLayer.PersonCardInfo();
-            this.linkLabelEditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -68,18 +67,6 @@
             this.personCardInfo1.Size = new System.Drawing.Size(870, 329);
             this.personCardInfo1.TabIndex = 3;
             // 
-            // linkLabelEditPersonInfo
-            // 
-            this.linkLabelEditPersonInfo.AutoSize = true;
-            this.linkLabelEditPersonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelEditPersonInfo.Location = new System.Drawing.Point(717, 179);
-            this.linkLabelEditPersonInfo.Name = "linkLabelEditPersonInfo";
-            this.linkLabelEditPersonInfo.Size = new System.Drawing.Size(123, 20);
-            this.linkLabelEditPersonInfo.TabIndex = 4;
-            this.linkLabelEditPersonInfo.TabStop = true;
-            this.linkLabelEditPersonInfo.Text = "Edit Person Info";
-            this.linkLabelEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEditPersonInfo_LinkClicked);
-            // 
             // ShowPersonInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,7 +74,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(895, 476);
-            this.Controls.Add(this.linkLabelEditPersonInfo);
             this.Controls.Add(this.personCardInfo1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClose);
@@ -102,6 +88,5 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
         private PersonCardInfo personCardInfo1;
-        private System.Windows.Forms.LinkLabel linkLabelEditPersonInfo;
     }
 }
